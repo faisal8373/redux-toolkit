@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Counter from './components/Counter';
+import logo from "./logo.svg";
+import "./App.css";
+import Counter from "./components/counter/Counter";
+import Posts from "./components/posts/Posts";
 
 function App() {
   return (
     <div className="App">
-    App
-    <Counter />
+      <Counter />
+      <Posts />
     </div>
   );
 }
