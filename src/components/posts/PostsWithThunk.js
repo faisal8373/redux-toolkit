@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { postAdded, selectAllPosts } from "./postSlice";
+import {
+  postAdded,
+  selectAllPosts,
+  getPostsStatus,
+  getPostsError,
+} from "./postSliceThunk";
 import { selectAllUsers } from "./users/userSlice";
 import Reactions from "./Reactions";
 
@@ -9,6 +14,9 @@ const Posts = () => {
   // getting data from redux and display
   const posts = useSelector(selectAllPosts);
   const users = useSelector(selectAllUsers);
+  const postStatus = useSelector(getPostsStatus);
+  const postError = useSelector(getPostsError);
+
   // console.log("all posts here", posts[0]);
 
   const orderedPosts = posts

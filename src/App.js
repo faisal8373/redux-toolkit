@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./components/counter/Counter";
-import Posts from "./components/posts/Posts";
+import Posts from "./components/posts/PostsWithThunk";
 
 function App() {
   return (
